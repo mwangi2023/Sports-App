@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports Tracker - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="app-header">
+    <h1>🏆 MySport Tracker</h1>
+    <div class="user-info">
+      <span id="welcomeUser"></span>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <!-- DASHBOARD CONTENT -->
+  <main class="dashboard">
+
+    <!-- Profile Section -->
+    <section class="profile">
+      <h2>👤 Profile</h2>
+      <p><strong>Name:</strong> <span id="profileName"></span></p>
+      <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+      <p><strong>Total Workouts:</strong> <span id="profileWorkouts">0</span></p>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <h2>📊 Stats</h2>
+      <p>Total Workouts: <span id="totalWorkouts">0</span></p>
+      <p>Hours This Week: <span id="hoursWeek">0</span></p>
+      <p>Calories Burned: <span id="calories">0</span></p>
+    </section>
+
+    <!-- Workouts Table -->
+    <section>
+      <h2>Recent Workouts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th><th>Sport</th><th>Duration</th><th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="workoutTable"></tbody>
+      </table>
+    </section>
+
+    <!-- Add Workout -->
+    <section>
+      <h2>Add Workout</h2>
+      <form id="workoutForm">
+        <select id="sportType" required>
+          <option value="">--Choose sport--</option>
+          <option>Running</option>
+          <option>Cycling</option>
+          <option>Football</option>
+          <option>Gym</option>
+        </select>
+        <input type="number" id="duration" placeholder="Duration (minutes)" required>
+        <input type="text" id="notes" placeholder="Notes">
+        <button type="submit">Add Workout</button>
+      </form>
+      <p id="workoutMessage"></p>
+    </section>
+
+    <!-- Workout Trends -->
+    <section>
+      <h2>Workout Trends</h2>
+      <canvas id="workoutChart" width="400" height="200"></canvas>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
