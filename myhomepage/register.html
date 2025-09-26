@@ -8,11 +8,11 @@
 <body>
   <div class="form-container">
     <h2>Register</h2>
-    <form id="registerForm">
-      <input type="text" id="registerName" placeholder="Full Name" required>
-      <input type="email" id="registerEmail" placeholder="Email" required>
-      <input type="password" id="registerPassword" placeholder="Password" required>
-      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+    <form id="registerForm" action="connect.php" method="post">
+      <input type="text" id="registerName" placeholder="Full Name" required name="Full Name">
+      <input type="email" id="registerEmail" placeholder="Email" required name="Email">
+      <input type="password" id="registerPassword" placeholder="Password" required name="Password">
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required name="Confirm Password">
       <button type="submit">Register</button>
     </form>
     <p>Already have an account? <a href="login.html">Login here</a></p>

@@ -8,12 +8,12 @@
 <body>
   <div class="form-container">
     <h2>Login</h2>
-    <form id="loginForm">
+    <form id="loginForm" action="connect.php" method="post">
       <label for="loginEmail">Email</label>
-      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="email" id="loginEmail" placeholder="Email" required name="email">
 
       <label for="loginPassword">Password</label>
-      <input type="password" id="loginPassword" placeholder="Password" required>
+      <input type="password" id="loginPassword" placeholder="Password" required name="password">
 
       <button type="submit">Login</button>
     </form>
